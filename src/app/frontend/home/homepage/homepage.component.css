@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+}
+
+.container .btn-group {
+  display: flex;
+}
+
+.container .btn-group a {
+  margin: 10px;
+}
