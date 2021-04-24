@@ -1,0 +1,39 @@
+<div class="alert alert-info alert-dismissible fade show m-0" role="alert">
+    <div class="container">
+        Usamos Cookies <a [routerLink]="['/politica-de-cookies']">Ver más</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navStyle">
+    <div class="container">
+
+        <a class="brand-navbar" [routerLink]="['/']"><img src="image/logo.png" alt="Responsive image" height="60px"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+            <span><i class="fas fa-align-right iconStyle"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ml-auto navList">
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/modelos']" class="nav-link">
+                        <i class="fas fa-home"></i> Modelos
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/brands']" class="nav-link"><i class="fas fa-cogs"></i>Marcas</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/recetas']" class="nav-link"><i class="fas fa-briefcase"></i>Recetas</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/resenas']" class="nav-link"><i class="fas fa-phone"></i>Reseñas</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/contacto']" class="nav-link"><i class="fas fa-users"></i>Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
