@@ -10,11 +10,12 @@ export class PrivacypageComponent implements OnInit {
   constructor(private tags: PageService) {}
 
   ngOnInit(): void {
-    const title = 'PRIVACY PAGE';
+    const title = 'Política de privacidad';
     this.tags.setPage({
       title,
-      description: '✅ DESCRIPTION TO PRIVACY PAGE',
-      image: 'https://imageprivacypage.jpg',
+      description:
+        '✅ Política de privacidad de la web https:ng-master-seo.com',
+      image: '../../assets/images/politica-de-privacidad.jpg',
     });
   }
 }
