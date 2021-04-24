@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://ng-master-seo.com',
+  gaTrackingID: 'UA-131325956-0',
+  featureFlag: {
+    // home page stage
+    // 0 = placeholder
+    // 1 = no mamak
+    // 2 = with speakers, no mamak
+    // 3 = mamak
+    homePageStage: 3,
+  },
 };
 
 /*
