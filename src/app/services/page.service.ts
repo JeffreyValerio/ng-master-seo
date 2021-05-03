@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Tags } from '../models/tags';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PageService {
-  public readonly postfix = ' | NG MASTER SEO';
+  public readonly postfix = ' | Tienda online';
+  private trackingID = environment.gaTrackingID;
 
   constructor(
     private title: Title,
@@ -19,6 +20,10 @@ export class PageService {
   setPage(config: Tags) {
     const postfix = config.skipTitlePostfix ? '' : this.postfix;
     this.meta.updateTag({ property: 'og:url', content: this.getCurrentPath() });
+    
+    if (config.robots) {
+      this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+    }
 
     if (config.title) {
       const title = config.title + postfix;
@@ -44,7 +49,16 @@ export class PageService {
       this.meta.updateTag({ name: 'twitter:image', content: config.image });
     }
 
+
     document.dispatchEvent(new Event('prerender-ready'));
+
+    // tslint:disable-next-line
+    if (!environment.production || !window['gtag']) return;
+
+    gtag('config', this.trackingID, {
+      'page-title': config.title,
+      'page-path': this.getCurrentPath(false),
+    });
   }
 
   getCurrentPath(includeBaseUrl = true) {

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'https://ng-master-seo.com',
-  gaTrackingID: 'UA-131325956-0',
+  gaTrackingID: 'G-LX7SVWEVFQ',
   featureFlag: {
     // home page stage
     // 0 = placeholder

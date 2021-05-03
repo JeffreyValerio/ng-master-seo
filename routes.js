@@ -1,3 +1,8 @@
+// const brands = require("./src/assets/data/brands.json");
+// const brandList = [...brands.brands.map((x) => "/marca/" + x.id)];
+// const products = require("./src/assets/data/products.json");
+// const productList = Object.keys(products).map((x) => "/freidora/" + x);
+
 const routes = {
   all: [
     "/",
@@ -5,16 +10,16 @@ const routes = {
     "/aviso-legal",
     "/contacto",
     "/sobre-nosotros",
-    "/politica-de-privacidad",
     "/politica-de-cookies",
+    "/politica-de-privacidad",
+    // ...brandList,
+    // ...productList,
   ],
   routePriority100: ["/"],
   routePriority80: [
-    "/aviso-legal",
     "/contacto",
-    "/sobre-nosotros",
-    "/politica-de-cookies",
-    "/politica-de-privacidad",
+    // ...brandList,
+    // ...productList,
   ],
 };
 

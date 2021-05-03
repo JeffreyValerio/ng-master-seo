@@ -1,37 +1,32 @@
-<div class="alert alert-info alert-dismissible fade show m-0" role="alert">
+<nav class="navbar navbar-expand-lg navbar-light mb-4">
     <div class="container">
-        Usamos Cookies <a [routerLink]="['/politica-de-cookies']">Ver más</a>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+        <a class="navbar-brand" [routerLink]="['/']">
+            <img class="brand"
+                src="https://"
+                alt="logo de freidoras"
+                loading="lazy" title="logo">
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="my-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    </div>
-</div>
 
-<nav class="navbar navbar-expand-lg navStyle">
-    <div class="container">
-
-        <a class="brand-navbar" [routerLink]="['/']"><img src="image/logo.png" alt="Responsive image" height="60px"></a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
-            <span><i class="fas fa-align-right iconStyle"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainMenu">
-            <ul class="navbar-nav ml-auto navList">
-                <li class="nav-item" routerLinkActive="active">
-                    <a [routerLink]="['/modelos']" class="nav-link">
-                        <i class="fas fa-home"></i> Modelos
-                    </a>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link title" [routerLink]="['/']">⁜ Home</a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a [routerLink]="['/brands']" class="nav-link"><i class="fas fa-cogs"></i>Marcas</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link title" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">⁜ Marcas</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" [routerLink]="['/freidora/Innsky-IS-AF002']">Innsky</a>
+                        <a class="dropdown-item" [routerLink]="['/freidora/Ninja-Air-Fryer-MAX']">Ninja</a>
+                        <a class="dropdown-item" [routerLink]="['/freidora/Philips-Airfryer-XXL-HD9652-90']">Philips</a>
+                    </div>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a [routerLink]="['/recetas']" class="nav-link"><i class="fas fa-briefcase"></i>Recetas</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a [routerLink]="['/resenas']" class="nav-link"><i class="fas fa-phone"></i>Reseñas</a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a [routerLink]="['/contacto']" class="nav-link"><i class="fas fa-users"></i>Contacto</a>
+                <li class="nav-item ">
+                    <a class="nav-link title" [routerLink]="['/contacto']">⁜ Contacto</a>
                 </li>
             </ul>
         </div>

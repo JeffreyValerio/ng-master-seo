@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   baseUrl: 'https://ng-master-seo.com',
-  gaTrackingID: 'UA-131325956-0',
+  gaTrackingID: 'G-LX7SVWEVFQ',
   featureFlag: {
     homePageStage: 3,
   },
